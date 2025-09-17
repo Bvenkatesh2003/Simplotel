@@ -21,7 +21,7 @@
         <li><a href="#contact">Contact Us</a></li>
         <li><a href="#gallery">Gallery</a></li>
       </ul>
-      <div class="menu-icon">☰</div>
+      <div class="menu-icon" id="menu-icon">☰</div>
     </nav>
   </header>
 
@@ -56,6 +56,15 @@
       <a href="#">Click →</a>
     </div>
   </section>
+  <script>
+  const menuIcon = document.getElementById("menu-icon");
+  const navLinks = document.getElementById("nav-links");
+
+  menuIcon.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
 
 </body>
+  
 </html>
