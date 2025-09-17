@@ -174,3 +174,33 @@ body {
     margin-top: 1.5rem;
   }
 }
+/* Default (desktop) */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;              /* hidden by default */
+    flex-direction: column;     /* stacked vertically */
+    background: #ff6f61;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  .navbar ul.active {
+    display: flex; /* show when active */
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
