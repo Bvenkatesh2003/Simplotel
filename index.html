@@ -12,7 +12,7 @@
   <header>
     <nav class="navbar">
       <div class="logo">🍔</div>
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#order">Order</a></li>
         <li><a href="#food">Food</a></li>
@@ -23,6 +23,14 @@
       </ul>
       <div class="menu-icon" id="menu-icon">☰</div>
     </nav>
+     <!-- Dummy Sections -->
+  <section id="home"><h1>Home</h1></section>
+  <section id="order"><h1>Order</h1></section>
+  <section id="food"><h1>Food</h1></section>
+  <section id="restaurant"><h1>Restaurant</h1></section>
+  <section id="testimonials"><h1>Testimonials</h1></section>
+  <section id="contact"><h1>Contact</h1></section>
+  <section id="gallery"><h1>Gallery</h1></section>
   </header>
 
   <!-- Hero Section -->
@@ -57,14 +65,21 @@
       <a href="#">Click →</a>
     </div>
   </section>
-  <script>
-  const menuIcon = document.getElementById("menu-icon");
-  const navLinks = document.getElementById("nav-links");
+   <script>
+    const menuIcon = document.getElementById("menu-icon");
+    const navLinks = document.getElementById("nav-links");
 
-  menuIcon.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-</script>
+    menuIcon.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    // Auto-close menu when clicking a link
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+  </script>
 
 </body>
   
